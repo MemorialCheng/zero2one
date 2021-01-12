@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-
+# -*- Coding: UTF-8 -*-
 """
 @Project ：zero2one
 @File ：selection_sort.py
