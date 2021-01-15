@@ -8,14 +8,10 @@
     测试程序
 """
 
-import time
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 import mnist_inference
 import mnist_train
-
-# 加载的时间间隔。
-EVAL_INTERVAL_SECS = 10
 
 
 def evaluate(mnist):
@@ -43,7 +39,6 @@ def evaluate(mnist):
             else:
                 print('No checkpoint file found')
                 return
-            # time.sleep(EVAL_INTERVAL_SECS)
 
 
 def main(argv=None):
