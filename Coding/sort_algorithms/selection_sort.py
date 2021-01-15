@@ -15,6 +15,7 @@ import timeit
 def select_sort(list):
     """
     传统的，利用两次循环遍历
+    直接改变原数列
     :param list:
     :return:
     """
