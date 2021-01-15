@@ -5,9 +5,9 @@
 @Author ：cheng
 @Date ：2021/1/15
 @Description : 快速排序
-复杂度： 最优时间复杂度 O(nlogn), 最坏时间复杂度 O(n^2)
-稳定性： 不稳定
-O(nlogn)解释说明：每一趟排序执行n遍，需要拆分2^x = n ==> x=logn次，所以总的 nlogn
+    复杂度： 最优时间复杂度 O(nlogn), 最坏时间复杂度 O(n^2)
+    稳定性： 不稳定
+    O(nlogn)解释说明：每一趟排序执行n遍，需要拆分2^x = n ==> x=logn次，所以总的 nlogn
 """
 
 
