@@ -16,6 +16,7 @@
 def bubble_sort(list):
     """
     冒泡排序
+    直接改变原数列
     :param list:
     :return:
     """
