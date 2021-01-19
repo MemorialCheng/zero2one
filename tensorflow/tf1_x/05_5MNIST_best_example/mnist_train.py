@@ -64,7 +64,7 @@ def train(mnist):
         tf.global_variables_initializer().run()
 
         # 在训练过程不在测试模型在验证集上的表现，验证和测试将在独立的程序完成
-        for i in range(TRAINING_STEPS):
+        for i in range(1, TRAINING_STEPS):
             xs, ys = mnist.train.next_batch(BATCH_SIZE)
             _, loss_value, step = sess.run([train_op, loss, global_step], feed_dict={x: xs, y_: ys})
             if i % 1000 == 0:
