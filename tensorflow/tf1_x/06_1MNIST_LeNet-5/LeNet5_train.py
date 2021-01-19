@@ -5,7 +5,7 @@
 @Author ：cheng
 @Date ：2021/1/16
 @Description : MNIST手写数字识别
-    LeNet-5实现
+    LeNet-5实现, 训练
 """
 
 import tensorflow as tf
@@ -19,7 +19,7 @@ BATCH_SIZE = 100
 LEARNING_RATE_BASE = 0.01
 LEARNING_RATE_DECAY = 0.99
 REGULARIZATION_RATE = 0.0001
-TRAINING_STEPS = 6000
+TRAINING_STEPS = 30001
 MOVING_AVERAGE_DECAY = 0.99
 MODEL_SAVE_PATH = "MNIST_model/"
 MODEL_NAME = "mnist_model"
@@ -37,7 +37,7 @@ def train(mnist):
     y_ = tf.placeholder(tf.float32, [None, LeNet5_inference.OUTPUT_NODE], name='y-input')
 
     regularizer = tf.contrib.layers.l2_regularizer(REGULARIZATION_RATE)
-    y = LeNet5_inference.inference(x, False, regularizer)
+    y = LeNet5_inference.inference(x, regularizer, True)
 
     global_step = tf.Variable(0, trainable=False)
 
@@ -64,7 +64,7 @@ def train(mnist):
     with tf.Session() as sess:
         tf.global_variables_initializer().run()
 
-        for i in range(TRAINING_STEPS):
+        for i in range(1, TRAINING_STEPS):
             xs, ys = mnist.train.next_batch(BATCH_SIZE)
 
             reshaped_xs = np.reshape(xs, (
@@ -86,4 +86,4 @@ def main(argv=None):
 
 
 if __name__ == '__main__':
-    main()
+    tf.app.run()
