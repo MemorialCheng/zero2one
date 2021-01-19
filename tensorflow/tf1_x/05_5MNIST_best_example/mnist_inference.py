@@ -5,7 +5,7 @@
 @Author ：cheng
 @Date ：2021/1/15
 @Description : MNIST最佳实战样例
-    前向传播过程和神经网络参数
+    前向传播过程和神经网络参数。
 """
 import tensorflow as tf
 
