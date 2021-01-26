@@ -9,14 +9,30 @@
         说明：tf.get_variable函数可以用来创建或者获取变量，当用于创建变量是，与tf.Variable的功能基本等价。
             不同之处是tf.Variable函数的name参数是可选的，tf.get_variable是必填的。
 """
-import tensorflow as tf
+# import tensorflow as tf
+#
+#
+# def demo1():
+#     with tf.variable_scope("foo"):
+#         v = tf.get_variable("v", [1], initializer=tf.constant_initializer(1.0))
+#
+#     # reuse=True表示这个上下文管理器内的tf.get_variable会直接获取已经创建的变量
+#     with tf.variable_scope("foo", reuse=True):
+#         v1 = tf.get_variable("v", [1])
+#         print(v == v1)  # 输出True,表示v,v1代表的是相同的tensorflow中的变量
 
 
-def demo1():
-    with tf.variable_scope("foo"):
-        v = tf.get_variable("v", [1], initializer=tf.constant_initializer(1.0))
+def maxSubArry(num):
+    subCount = 0
+    maxCount = num[0]
+    for i in range(len(num)):
+        subCount += num[i]
+        if subCount > maxCount:
+            maxCount = subCount
+        if subCount < 0:
+            subCount = 0
+    return maxCount
 
-    # reuse=True表示这个上下文管理器内的tf.get_variable会直接获取已经创建的变量
-    with tf.variable_scope("foo", reuse=True):
-        v1 = tf.get_variable("v", [1])
-        print(v == v1)  # 输出True,表示v,v1代表的是相同的tensorflow中的变量
+
+if __name__ == '__main__':
+    maxSubArry([-2, 1, -3, 4, -1, 2, 1, -5, 4])
