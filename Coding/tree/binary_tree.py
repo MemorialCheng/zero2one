@@ -16,6 +16,9 @@ class Node(object):
 
 
 class BinaryTree(object):
+    """
+    二叉树
+    """
     def __init__(self):
         self.root = None
 
