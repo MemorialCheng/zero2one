@@ -9,7 +9,7 @@
 import tensorflow as tf
 import json
 
-# 读取checkpoint的路径。4800表示是训练程序在第4800步保存的checkpoint
+# 读取checkpoint的路径。1400表示是训练程序在第4800步保存的checkpoint
 CHECKPOINT_PATH = 'Trained_model/seq2seq_ckpt-1400'
 
 # 模型参数。必须与训练时的模型参数保持一致
