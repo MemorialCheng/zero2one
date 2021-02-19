@@ -22,7 +22,7 @@ def bubble_sort(list):
     """
     n = len(list)
     if n <= 1:
-        return list
+        return
     for i in range(0, n - 1):
         is_sorted = True
         for j in range(0, n - i - 1):
