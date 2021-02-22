@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 """
 @Project ：zero2one 
-@File ：leetcode70_dp.py
+@File ：leetcode070_dp.py
 @Author ：cheng
 @Date ：2021/2/22
 @Description : 题目：70-爬楼梯
