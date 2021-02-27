@@ -39,23 +39,23 @@ def quick_sort(list, first, last):
     quick_sort(list, low+1, last)
 
 
-def quick_sort_op(iList):
+def quick_sort_op(list):
     """
     方法巧妙，充分利用Python，值得学习。
     返回有序数列，未直接改变原数列
-    :param iList:
+    :param list:
     :return:
     """
-    if len(iList) <= 1:
-        return iList
+    if len(list) < 2:
+        return list
     left = []
     right = []
-    for i in iList[1:]:
-        if i <= iList[0]:
+    for i in list[1:]:
+        if i <= list[0]:
             left.append(i)
         else:
             right.append(i)
-    return quick_sort_op(left) + [iList[0]] + quick_sort_op(right)
+    return quick_sort_op(left) + [list[0]] + quick_sort_op(right)
 
 
 if __name__ == '__main__':
