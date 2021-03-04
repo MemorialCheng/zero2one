@@ -19,6 +19,8 @@ def insert_sort(list):
     直接改变原数列
     """
     n = len(list)
+    if n < 2:
+        return
     for i in range(1, n):
         # 从第i个元素开始向前比较，如果小于前面一个元素，则交换位置
         for j in range(i, 0, -1):
