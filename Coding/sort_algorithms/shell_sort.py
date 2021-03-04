@@ -14,18 +14,17 @@
 
 def shell_sort(list):
     n = len(list)
-    if n <= 1:
-        return list
+    if n < 2:
+        return
     gap = n // 2  # 定义步长
     # gap为1,2,......
     while gap > 0:
         for i in range(gap, n):
             # 与普通插入排序区别就在于gap
-            j = i  # j = [gap, gap+1, gap+2, ..., n-1]
-            while j > 0:
+            # j = [i, i-gap, i-gap-gap, ..., 0]
+            for j in range(i, 0, -gap):
                 if list[j] < list[j-gap]:
                     list[j], list[j-gap] = list[j-gap], list[j]
-                    j -= gap
                 else:
                     break
         # 缩短步长，减半
