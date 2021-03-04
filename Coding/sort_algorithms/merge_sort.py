@@ -10,18 +10,18 @@
 """
 
 
-def merge_sort(alist):
+def merge_sort(list):
     """
     归并排序
     返回有序数列，未直接改变原数列
     """
-    n = len(alist)
-    if n <= 1:
-        return alist
-    mid = n//2
+    n = len(list)
+    if n < 2:
+        return list
+    mid = n // 2
 
-    left_list = merge_sort(alist[:mid])  # left_list 采用归并排序后形成的有序的新列表
-    right_list = merge_sort(alist[mid:])  # right_list 采用归并排序后形成的有序的新列表
+    left_list = merge_sort(list[:mid])  # left_list 采用归并排序后形成的有序的新列表
+    right_list = merge_sort(list[mid:])  # right_list 采用归并排序后形成的有序的新列表
 
     # 将两个有序的子序列合并为一个新的整体
     # left_point, right_point分别表示两个子序列指向第一个元素的下标
@@ -50,4 +50,3 @@ if __name__ == '__main__':
     print(test_list)
     print("=====排序后=========")
     print(merge_sort(test_list))
-
