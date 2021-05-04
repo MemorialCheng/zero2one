@@ -38,7 +38,9 @@ sklearn中决策树的类都在”tree“这个模块之下。这个模块总共
 |tree.ExtraTreeClassifier|高随机版本的分类树|
 |tree.ExtraTreeRegressor|高随机版本的回归树|
 
-# Hadoop
+# 5 Hive
 
-# Hive
+# 6 Hadoop
+
+
 
